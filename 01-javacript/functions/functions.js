@@ -25,7 +25,7 @@ function calculateSupply(age, amountPerDay) {
 
 ///////////////// THE GEOMETRIZER //////////////////
 function calcCircumference(radius) {
-    var circumference = (2 * Math.PI) * radius;
+    var circumference = 2 * Math.PI * radius;
     console.log("The circumference is " + circumference);
 }
 
@@ -39,6 +39,7 @@ function calcArea(radius) {
 function celsiusToFahrenheit(celsius) {
     var fahrenheit = (celsius *  (9 / 5)) + 32;
     console.log("The temperature is " + celsius + " degrees celsius and " + fahrenheit + " degrees fahrenheit");
+
 }
 
 function fahrenheitToCelsius(fahrenheit) {
