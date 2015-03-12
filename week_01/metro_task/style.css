@@ -1,17 +1,39 @@
-div {
-	text-align: center;
-	width: 800px; margin:0 auto;
+body {
+	background: url("fs_station.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -10;
 }
 
+div {
+	text-align: center;
+	width: 1000px; margin:0 auto;
+	color: white;
+	font-family: 'Questrial', serif;
+}
+
+p {
+	font-size: 1.5em;
+	background-color: #666666;
+}
 
 th {
     text-align: center;
+    /*text-decoration: underline;*/
 }
 
 td {
     text-align: center;
+    color: #E0E0E0 ;
 }
 
 table {
-	width: 100%; 
+	width: 100%;
+	margin: 20px;
+	padding: 0px; 
+	color: white;
+	font-size: 1.25em;
+}
+input {
+	margin: 5px;
 }
