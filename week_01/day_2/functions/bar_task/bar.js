@@ -23,7 +23,7 @@ btnEnter.addEventListener('click', doSomething); //click is an event there are m
 */
 
 function doSomething() {
-	var userAge = document.getElementById('userAge').value;
+	var userAge = document.getElementById("userAge").value;
 	console.log("userAge: ", userAge);
 	parseInt(userAge, 10);		
 

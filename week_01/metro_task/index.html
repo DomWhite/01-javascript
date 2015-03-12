@@ -1,11 +1,33 @@
 <html>
 	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-	<h1>Metro Task</h1>
-	<h1>Open the console</h1>
-	
-		
+	<div>
+	<h1>PTV Planner</h1>
+	<table>
+	  <tr>
+	    <th>Train Line</th>
+	    <th>Train Stations</th> 
+	  </tr>
+	  <tr>
+	    <td>Alamein</td>
+	    <td>Flinders, Richmond, East Richmond, Burnley, Hawthorn, Glenferrie</td> 
+	  </tr>
+	  <tr>
+	    <td>Glen Waverly</td>
+	    <td>Flagstaff, Melbourne Central, Parliament, Richmond, Kooyong, Tooronga</td> 
+	  </tr>
+	  <tr>
+	    <td>Sandringham</td>
+	    <td>Southern Cross, Richmond, South Yarra, Prahran, Windsor</td> 
+	  </tr>
+	</table>
+	<p>Please enter the train line and station would you like to start at?<input id="startLine" type="text" placeholder="Train Line"><input id="startStation" type="text" placeholder="Train Station"></p>
+	<button id="btnEnter1">Select</button>
+	<p>Please enter the train line and station would you like to finish at?<input id="stopLine" type="text" placeholder="Train Line"><input id="stopStation" type="text" placeholder="Train Station"></p>
+	<button id="btnEnter2">Select</button>	
+	</div>
 	</body>
 	<script src="metro.js"></script>
 </html>
