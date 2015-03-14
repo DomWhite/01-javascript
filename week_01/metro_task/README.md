@@ -30,7 +30,7 @@ The key to the lab is the intersection of the lines at Richmond.
 * Use input validation
   - User must enter a line and station in the subway network
   - If the user enters something else, your program should handle it
-* Add an additional lines
+* Add on additional lines
 * Allow trains to have multiple intersection points
 
 
