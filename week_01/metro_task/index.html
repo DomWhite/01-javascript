@@ -5,7 +5,7 @@
 	</head>
 	
 	<body>
-	<div>
+	<div id="whole_page">
 	<h1>PT<span style="color: red">V</span> Planner</h1>
 	<table>
 	  <tr>
@@ -26,14 +26,17 @@
 	  </tr>
 	</table>
 	<div class="para_div">
-	<p>Please enter the train line and station would you like to start at?</p>
-	<input id="startLine" type="text" placeholder="Train Line"><input id="startStation" type="text" placeholder="Train Station">
-	<button id="btnEnter1">Select</button>
+		<p>Please enter the train line and station would you like to start at?</p>
+		<input id="startLine" type="text" placeholder="Train Line"><input id="startStation" type="text" placeholder="Train Station">
 
-	<p>Please enter the train line and station would you like to finish at?</p>
-	<input id="stopLine" type="text" placeholder="Train Line"><input id="stopStation" type="text" placeholder="Train Station">
-	<button id="btnEnter2">Select</button>	
-	<div id="output"></div>
+		<p>Please enter the train line and station would you like to finish at?</p>
+		<input id="stopLine" type="text" placeholder="Train Line"><input id="stopStation" type="text" placeholder="Train Station">
+		<button id="btnEnter">Go</button>
+	</div>	
+	<div id="output">
+		<div id="display">
+			<p></p>
+		</div>
 	</div>
 	</div>
 	</body>

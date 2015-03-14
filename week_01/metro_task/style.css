@@ -37,3 +37,14 @@ table {
 input {
 	margin: 5px;
 }
+
+#output {
+	background-color: #E0E0E0;
+	margin: 20px;
+}
+
+#display.p {
+	color: white;
+	text-align: center;
+}
+
