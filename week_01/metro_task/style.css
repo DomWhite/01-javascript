@@ -1,9 +1,6 @@
 
 html { 
   background: url("images/fs_station.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -31,16 +28,17 @@ p {
 	padding: 25px;
 	border-top-left-radius: 80px;
 	border-bottom-right-radius: 80px;
+	border-bottom-left-radius: 80px;
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
-	box-shadow: 16px -12px 17px #000000;
+	/*box-shadow: 16px -12px 17px #000000;*/
 
 }
 
 table {
-	padding: 25px;
+	/*padding: 25px;*/
 	border-radius: 100px;
 	width: 900px;
 }
@@ -74,42 +72,33 @@ input {
 }
 
 #output {
-	border-style: ridge;
-	border-color: white;
-	margin-top: 20px;
-	border-right: auto;
-	border-left: auto;
-	padding: 1px;
-	background-color:rgba(0,0,0,0.5);
+	background-color:rgba(255,255,255,0.75);
+	padding: 5px 25px 5px 25px;
+	border-top-left-radius: 80px;
+	border-bottom-right-radius: 80px;
+	border-bottom-left-radius: 80px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	margin-bottom: 50px;
+	/*box-shadow: 16px -12px 17px #FFFFFF;*/
 
 }
 
 #display {
-	color: white;
+	color: black;
 	text-align: center;
 }
 
 
 #btnGo {
 	margin-top: 20px;
-	-moz-box-shadow:inset -6px -4px 11px -2px #c1ed9c;
-	-webkit-box-shadow:inset -6px -4px 11px -2px #c1ed9c;
 	box-shadow:inset -6px -4px 11px -2px #c1ed9c;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #567019), color-stop(1, #8cb82b) );
-	background:-moz-linear-gradient( center top, #567019 5%, #8cb82b 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#567019', endColorstr='#8cb82b');
 	background-color:#567019;
-	-webkit-border-top-left-radius:37px;
-	-moz-border-radius-topleft:37px;
 	border-top-left-radius:37px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
 	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:37px;
-	-moz-border-radius-bottomright:37px;
 	border-bottom-right-radius:37px;
-	-webkit-border-bottom-left-radius:37px;
-	-moz-border-radius-bottomleft:37px;
 	border-bottom-left-radius:37px;
 	text-indent:0px;
 	border:1px solid #83c41a;
@@ -127,13 +116,9 @@ input {
 	text-shadow:4px -1px 7px #689324;
 }
 #btnGo:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #567019) );
-	background:-moz-linear-gradient( center top, #8cb82b 5%, #567019 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#567019');
 	background-color:#8cb82b;
 }
 #btnGo:active {
 	position:relative;
 	top:1px;
-
 }
