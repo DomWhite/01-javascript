@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;     /* Makes all elements stay true to user defined borders*/
+}
+
+body {
+	background-color: plum;
+}
+
+.outer h1 {
+	text-align: center;
+}
+
+.menu li {
+	display: inline;
+	list-style-type: none;
+}
+
+.outer {
+	box-sizing: border-box;
+	width: 50%;
+	margin: auto;
+	background-color: #ccc;
+	padding: 15px;
+	border-radius: 50%;
+}
+
+.inner {
+	background-color: #aaa;
+}
+
+
+.warning {
+	color: lime;
+}
+
+a:hover {
+	/*pseudo selecter applies css at state listed */
+	color: yellow;
+}
+
+a:visited {
+	text-decoration-style: wavy;
+}
+
+#desire {
+	font-size: 500%;
+}
+
+p.warning {
+
+}
+
+article p {
+	/*All paragraphs within article*/
+	text-decoration: underline;
+}
+
+article > p {
+	/*for direct child of article*/
+}

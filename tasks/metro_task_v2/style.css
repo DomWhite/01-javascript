@@ -14,7 +14,9 @@ h1 {
 #whole_page {
 	text-align: center;
 	max-width: 1000px margin:0 auto;
+	/*max-width: 67% margin:0 auto;*/
 	min-width: 690px;
+	/*min-width: 33px;*/
 	color: white;
 	font-family: 'Questrial', serif;
 }

@@ -83,14 +83,14 @@ function calcDistance(start, finish) {
 	if (startLine === "Alamein") {
 		indexStartRich = metro["Alamein"].indexOf("Richmond");
 	} else if (startLine === "Glen Waverly") {
-		indexStartRich = metro["Glen Waverly"].indexOf("Richmond");		//NEEDS TO BE REFACTORED INTO A FUNCTION
+		indexStartRich = metro["Glen Waverly"].indexOf("Richmond");		
 	} else if (startLine === "Sandringham") {
 		indexStartRich = metro["Sandringham"].indexOf("Richmond");
 	}
 
 	/////// INDEX OF RICHMOND STATION ON THE FINISH/ARRIVAL LINE 	
 		var indexFinishRich;
-	if (stopLine === "Alamein") {										//NEEDS TO BE REFACTORED INTO A FUNCTION
+	if (stopLine === "Alamein") {										
 		indexFinishRich = metro["Alamein"].indexOf("Richmond");
 	} else if (stopLine === "Glen Waverly") {
 		indexFinishRich = metro["Glen Waverly"].indexOf("Richmond");
@@ -104,7 +104,7 @@ function calcDistance(start, finish) {
 	} else if (startLine === "Glen Waverly") {					//	index of the departure station. Integer is then converted
 		var tripPartOne = Math.abs(start - indexStartRich);		//	into a positive via Math.abs()
 	} else if (startLine === "Sandringham") {					
-		var tripPartOne = Math.abs(start - indexStartRich);		//NEEDS TO BE REFACTORED INTO A FUNCTION
+		var tripPartOne = Math.abs(start - indexStartRich);		
 	}
 
 	var tripPartTwo;
@@ -113,7 +113,7 @@ function calcDistance(start, finish) {
 	} else if (stopLine === "Glen Waverly") {					//	index of the arrival station. Integer is then converted
 		var tripPartTwo = Math.abs(finish - indexFinishRich);	//	into a positive via Math.abs()
 	} else if (stopLine === "Sandringham") {
-		var tripPartTwo = Math.abs(finish - indexFinishRich);	//NEEDS TO BE REFACTORED INTO A FUNCTION
+		var tripPartTwo = Math.abs(finish - indexFinishRich);	
 	}
 
 	var numberOfStops = tripPartOne + tripPartTwo;
@@ -125,7 +125,6 @@ function calcDistance(start, finish) {
 		var embark = (metro[startLine].slice(indexStartRich+1, start).reverse());
 		}
 
-	console.log(embark);
 
 	var disembark;
 	if (finish < indexFinishRich) {

@@ -15,7 +15,7 @@ function withdrawC() {
 		var totalSavingsAmount = currentSavings - withdrawChecking;
 		document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
 	}
-	checkingZero();
+
 }
 
 function depositS() {
@@ -28,35 +28,12 @@ function depositS() {
 function withdrawS() {
 	var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
 	var withdrawSavings = parseFloat(document.getElementById("savingsAmount").value, 10);
-	if (currentSavings > 0.00) {
-		var totalSavingsAmount = currentSavings - withdrawSavings;
-		document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
-	} else {
-		var totalCheckingAmount = currentChecking - withdrawSavings;
-		document.getElementById("balance1").innerHTML = parseFloat(totalCheckingAmount).toFixed(2);
-	}
-	savingsZero;
+	var totalSavingsAmount = currentSavings - withdrawSavings;
+	document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
 }
-
 
 var currentChecking = parseFloat(document.getElementById("balance1").innerHTML);
 var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
-
-function checkingZero() {
-	if (currentChecking === 0.00 || currentChecking === 0) {
-		balance1.style.backgroundColor = "red";
-	} else { 
-		balance1.style.backgroundColor = "#E3E3E3";
-	}
-}
-
-function savingsZero() {
-	if (currentSavings === 0.00 || currentSavings === 0) {
-		balance2.style.backgroundColor = "red";
-	} else {
-		balance2.style.backgroundColor = "#E3E3E3";
-	}
-}
 
 document.getElementById("checkingDeposit").onclick = depositC;
 document.getElementById("checkingWithdraw").onclick = withdrawC;
