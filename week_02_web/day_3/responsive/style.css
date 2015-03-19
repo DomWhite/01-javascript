@@ -1,0 +1,47 @@
+/*Based on a page with width 900px*/
+
+body {
+	font-family: 'Revalia', cursive;
+	margin: 0 auto;		
+	width: 90%;
+}
+
+img {
+	float: left;
+	max-width: 100%;
+}
+
+.span-1, .span-2, .span-3 {
+	min-height: 100px;
+	float: left;
+	margin-right: 1.11111111%;   /* (10 / 900) * 100 = 1.11111111111111*/
+	width: 98.88888;
+}
+
+.span-1{
+	background-color: #D1D1D1;
+	/*width: 32.222222222%;		 (290 / 900) * 100 = 32.2222222222 */
+}
+
+.span-2 {
+	background-color: #324A5F;
+	/*width: 65.5555555555%; 	 (590 / 900) * 100 = 65.5555555555 */
+}
+
+.span-3 {
+	background-color: #671BFF;
+	/*width: 98.8888888888%;   (890 / 900) * 100  = 98.88888888888 */
+}
+/* ===== MEDIA QUERIES =====  */
+/* acts like a short hand if statement. */ 
+
+@media all and (min-width: 35em) {
+
+	.span-1 {
+		width: 32.222222%;
+	}
+
+	.span-2 {
+		width: 65.55555555555%;
+	}
+}

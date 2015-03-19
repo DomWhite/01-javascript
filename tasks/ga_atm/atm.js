@@ -1,41 +1,78 @@
-function depositC() {
-	var currentChecking = parseFloat(document.getElementById("balance1").innerHTML);
-	var depositChecking = parseFloat(document.getElementById("checkingAmount").value, 10);
-	var totalCheckingAmount = currentChecking + depositChecking;
-	document.getElementById("balance1").innerHTML = parseFloat(totalCheckingAmount).toFixed(2);
+var accounts = {
+  checking: {
+    balance: 0,
+    deposit: function(amount) {
+      this.balance = this.balance + amount;      
+    },
+    withdraw: function(amount) {
+      if (amount <= this.balance) {
+        // have enough money
+        this.balance = this.balance - amount;
+      } else {
+        return false;						//returns false so the programmer has a workable value to manipulate later i.e. if "false" then...
+      }      
+    }
+  },
+  savings: {
+    balance: 0,
+    deposit: function(amount) {
+      this.balance = this.balance + amount;      
+    },
+    withdraw: function(amount) {
+      if (amount <= this.balance) {
+        // have enough money
+        this.balance = this.balance - amount;
+      } else {
+        return false;						//returns false so the programmer as a workable value to manipulate later i.e. if "false" then...
+      }      
+    }
+  }
+};
+
+
+function renderBalance() {
+	var checkingBalanceDisplay = document.getElementById("balance1");	//refreshes the balance
+	checkingBalanceDisplay.innerHTML = "$" + accounts.checking.balance;
 }
 
-function withdrawC() {
-	var currentChecking = parseFloat(document.getElementById("balance1").innerHTML);
-	var withdrawChecking = parseFloat(document.getElementById("checkingAmount").value, 10);
-	if (currentChecking > 0.00) {
-		var totalCheckingAmount = currentChecking - withdrawChecking;
-		document.getElementById("balance1").innerHTML = parseFloat(totalCheckingAmount).toFixed(2);
-	} else {
-		var totalSavingsAmount = currentSavings - withdrawChecking;
-		document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
-	}
+var checkingDepositBtn = document.getElementById("checkingDeposit");
+checkingDepositBtn.addEventListener("click", function(){
+	var depositInput = document.getElementById("checkingAmount");		  //grabs the data from input with id checking amount
+	var depositAmount = parseInt(depositInput.value, 10);				      //turns string input taken from checking amount and converts it to an integer
 
-}
+	accounts.checking.deposit(depositAmount);							// runs function deposit with the argument taken from var = deposit amount
+	renderBalance();													// refreshes display
+});
 
-function depositS() {
-	var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
-	var depositSavings = parseFloat(document.getElementById("savingsAmount").value, 10);
-	var totalSavingsAmount = currentSavings + depositSavings;
-	document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
-}
 
-function withdrawS() {
-	var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
-	var withdrawSavings = parseFloat(document.getElementById("savingsAmount").value, 10);
-	var totalSavingsAmount = currentSavings - withdrawSavings;
-	document.getElementById("balance2").innerHTML = parseFloat(totalSavingsAmount).toFixed(2);
-}
 
-var currentChecking = parseFloat(document.getElementById("balance1").innerHTML);
-var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
+var checkingWithdrawBtn = document.getElementById('checkingWithdraw');
+checkingWithdrawBtn.addEventListener('click', function() {
+  var depositInput = document.getElementById('checkingAmount');
+  var withdrawAmount = parseInt(depositInput.value, 10);
 
-document.getElementById("checkingDeposit").onclick = depositC;
-document.getElementById("checkingWithdraw").onclick = withdrawC;
-document.getElementById("savingsDeposit").onclick = depositS;
-document.getElementById("savingsWithdraw").onclick = withdrawS;
+  accounts.checking.withdraw(withdrawAmount);
+  renderBalance();  
+})
+
+////////////////////////////////////////////////
+var checkingSavingsBtn = document.getElementById("savingsDeposit");
+checkingDepositBtn.addEventListener("click", function(){
+  var depositInput = document.getElementById("checkingAmount");   //grabs the data from input with id checking amount
+  var depositAmount = parseInt(depositInput.value, 10);       //turns string input taken from checking amount and converts it to an integer
+
+  accounts.checking.deposit(depositAmount);             // runs function deposit with the argument taken from var = deposit amount
+  renderBalance();                          // refreshes display
+});
+
+
+
+var checkingWithdrawBtn = document.getElementById('checkingWithdraw');
+checkingWithdrawBtn.addEventListener('click', function() {
+  var depositInput = document.getElementById('checkingAmount');
+  var withdrawAmount = parseInt(depositInput.value, 10);
+
+  accounts.checking.withdraw(withdrawAmount);
+  renderBalance();  
+})
+

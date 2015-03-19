@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+.container {
+	width: 900px;
+	background-color: pink;
+	margin: 0 auto;				/*applies 0 margin to top/bottom and then automates left/right to centre it*/
+}
+
+.container div:first-child {
+	background-color: lime;
+	display: inline-block;
+	width: 50%;
+}
+
+.container div:last-child {
+	display: inline-block;
+	width: 50%;
+	background-color: plum;
+}

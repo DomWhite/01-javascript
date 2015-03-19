@@ -1,0 +1,58 @@
+body {
+	background-color: linen;
+}
+
+img {
+	height: 300px;
+	width: 450px;
+}
+
+.container {
+	max-width: 600px;
+	margin: auto;
+}
+
+.hide {
+	/*display: none;*/
+	visibility: hidden; 
+}
+
+.showInLine {
+	display: inline; /* you CAN NOT change the width of inline */
+}
+
+.showInlineBlock {
+	display: inline-block; /**/
+	width: 50%
+}
+
+.box {
+	width: 250px;
+	height: 100px;
+	border: 1px solid blue;
+	text-align: center;
+	margin-bottom: 5px;
+	line-height: 100px;
+	border-bottom-left-radius: 30px;
+	
+}
+
+.position-static {
+	position: static;
+}
+
+.position-fixed {   
+	position: fixed;	/*fixed is always relative to the window/screen*/
+	top: 10px;
+	right: 10px;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}

@@ -35,28 +35,31 @@ function withdrawS() {
 		var totalCheckingAmount = currentChecking - withdrawSavings;
 		document.getElementById("balance1").innerHTML = parseFloat(totalCheckingAmount).toFixed(2);
 	}
-	savingsZero;
 }
 
 
 var currentChecking = parseFloat(document.getElementById("balance1").innerHTML);
 var currentSavings = parseFloat(document.getElementById("balance2").innerHTML);
 
-function checkingZero() {
-	if (currentChecking === 0.00 || currentChecking === 0) {
-		balance1.style.backgroundColor = "red";
-	} else { 
-		balance1.style.backgroundColor = "#E3E3E3";
-	}
-}
 
-function savingsZero() {
-	if (currentSavings === 0.00 || currentSavings === 0) {
-		balance2.style.backgroundColor = "red";
-	} else {
-		balance2.style.backgroundColor = "#E3E3E3";
-	}
+function zeroRed(balanceX) {
+ 		balanceX.style.backgroundColor = "red";
 }
+// function zeroRed(currentAccount, balanceX) {
+// 	if (currentAccount === 0.00 || currentAccount === 0) {
+// 		balanceX.style.backgroundColor = "red";
+// 	} else { 
+// 		balance1.style.backgroundColor = "#E3E3E3";
+// 	}
+// }
+
+// function savingsZero() {
+// 	if (currentSavings === 0.00 || currentSavings === 0) {
+// 		balance2.style.backgroundColor = "red";
+// 	} else {
+// 		balance2.style.backgroundColor = "#E3E3E3";
+// 	}
+// }
 
 document.getElementById("checkingDeposit").onclick = depositC;
 document.getElementById("checkingWithdraw").onclick = withdrawC;
