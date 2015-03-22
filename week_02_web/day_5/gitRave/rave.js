@@ -10,7 +10,7 @@ var randomRGB = function() {
 // schedular: calls a function every 10 milliseconds. Any function can be passed in. 
 //In this case the function has a for loop determining 3 random number
 // .fill is the css property (it could be background-color, or color, etc)
-var rave = function () {
+var gitRave = function () {
 	setInterval(function(){
 		for (var i = 0; i < squares.length; i++) {
 			var fillColor = 'rgb(' + randomRGB() + ',' + randomRGB() + ',' + randomRGB() + ')';
