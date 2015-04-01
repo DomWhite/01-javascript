@@ -1,0 +1,14 @@
+<h1>Hi</h1>
+
+<p>codyperry</p>
+
+ <%= Time.now %>   <!-- the embedded ruby tag with an equal sign prints to the html -->
+
+
+<div>
+  <% @people["results"].each do |person| %> 
+
+	<div><%= person["name"] %></div>  
+
+   <% end %> 
+ </div>
