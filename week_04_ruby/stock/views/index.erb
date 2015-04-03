@@ -1,0 +1,11 @@
+
+<form action="/">
+	<input type="text" name="stock_symbol" value=" <%= params[:stock_symbol] %> "> <button>Search</button>
+</form>
+
+<div>
+	<h3>Stock Code entered</h3>
+<%= params[:stock_symbol] %>
+	<h4>Stock Price</h4>
+	<%= @price %> 
+</div>

@@ -1,9 +1,12 @@
+require 'pry'
+
 def menu
 puts "Select an option and then enter two numbers"
 	puts "a) addition"
 	puts "b) subtraction"
 	puts "c) multiplication"
 	puts "d) division"
+	puts "===== ADVANCED ====="
 	puts "e) exponent"
 	puts "f) sqaure"
 	puts "g) square root"
@@ -11,35 +14,35 @@ puts "Select an option and then enter two numbers"
 end
 
 def runCalc(choice, firstNumber, secondNumber)
-	if choice == "a"
-		result = firstNumber + secondNumber
-		puts "#{firstNumber} + #{secondNumber} = #{result}"
+		if choice == "a"
+			result = firstNumber + secondNumber
+			puts "#{firstNumber} + #{secondNumber} = #{result}"
 
-	elsif choice == "b"
-		result = firstNumber - secondNumber
-		puts "#{firstNumber} - #{secondNumber} = #{result}"
+		elsif choice == "b"
+			result = firstNumber - secondNumber
+			puts "#{firstNumber} - #{secondNumber} = #{result}"
 
-	elsif choice == "c"
-		result = firstNumber * secondNumber
-		puts "#{firstNumber} * #{secondNumber} equals #{result}"
+		elsif choice == "c"
+			result = firstNumber * secondNumber
+			puts "#{firstNumber} * #{secondNumber} equals #{result}"
 
-	elsif choice == "d"
-		result = firstNumber / secondNumber
-		puts "#{firstNumber} / #{secondNumber} = #{result}"
+		elsif choice == "d"
+			result = firstNumber / secondNumber
+			puts "#{firstNumber} / #{secondNumber} = #{result}"
 
-	elsif choice == "e"
-		result = firstNumber ** secondNumber
-		puts "#{firstNumber} ^ #{secondNumber} = #{result}"
+		elsif choice == "e"
+			result = firstNumber ** secondNumber
+			puts "#{firstNumber} ^ #{secondNumber} = #{result}"
 
-	elsif choice == "f"
-		result = firstNumber * firstNumber
-		puts "#{firstNumber} squared = #{result}"
+		elsif choice == "f"
+			result = firstNumber * firstNumber
+			puts "#{firstNumber} squared = #{result}"
 
-	elsif choice == "g"
-		result = Math.sqrt(firstNumber)
-		puts "The square root of #{firstNumber} = #{result}"
+		elsif choice == "g"
+			result = Math.sqrt(firstNumber)
+			puts "The square root of #{firstNumber} = #{result}"
 
-	end
+		end
 end
 
 
@@ -51,7 +54,7 @@ choice = gets.chomp.downcase
 
 
 while choice != "q"
-	if !"f" || !"g"
+	if choice == !"f" || !"g"
 		puts "Please enter first number"
 		firstNumber = gets.chomp.to_i
 		puts "Please enter second number"
@@ -62,7 +65,7 @@ while choice != "q"
 	else 
 		puts "Please enter a number"
 		firstNumber = gets.chomp.to_i
-		runCalc(choice, firstNumber)
+		runCalc(choice, firstNumber, 0)  #zero placed in here in order to satisfy function but isn't used
 		menu
 		choice = gets.chomp.downcase
 	end
@@ -70,9 +73,3 @@ while choice != "q"
 end
 
 puts "Thanks for using the Crappy Calculator"
-
-
-
-
-
-
