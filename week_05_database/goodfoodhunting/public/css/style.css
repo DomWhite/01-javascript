@@ -1,0 +1,47 @@
+body, html {
+	height: 100%;
+	background-color: #3F7CAC;
+	text-align: center;
+	
+}
+
+h1, h2 {
+	color: #E2F89C;
+}
+
+#container {
+	width: 20em;
+	height: 60%;
+	margin: 0 auto;
+	background-color: #56494C;
+	border-radius: 50px;
+	padding: 10px;
+}
+
+p {
+	color: #E2F89C;
+}
+
+form {
+	background-color: #56494C;
+	width: 50%;
+	margin: 0 auto;
+	height: 20em;
+}
+
+input {
+	margin: 2em 0;
+}
+
+img {
+	width: 100px;
+
+}
+
+.new_dish {
+	display: block;
+}
+
+a:visited {
+    color: white;
+}
