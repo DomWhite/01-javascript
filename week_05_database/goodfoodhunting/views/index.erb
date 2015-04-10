@@ -1,11 +1,15 @@
 <div id="container">
 	<h1>Good Food Hunting</h1>
 
-	 <% @rows.each do |row| %>
-	  <p><%= row['name'] %></p>
-	  <img src="<%= row['image_url'] %>" alt="">
-	  <a href="/dishes/<%= row['id'] %>/edit">Edit</a>
-	  <a href="/dishes/<%= row['id'] %>/delete">Delete</a>
+	 <% @dishes.each do |dish| %>
+	  <p><%= dish.name %></p>
+	  <img src="<%= dish.image_url %>" alt="">
+	  <a href="/dishes/<%= dish.id %>/edit">Edit</a>
+
+	  <form action="/dishes/<%= dish.id %>/delete" method ="post">
+	  	<input type="hidden" name="_method" value="delete">
+	  	<button>Delete</button>
+	  </form>
 	 <% end %> 
 
 	 <a href="/dishes/new" class="new_dish">New Dish</a>

@@ -1,0 +1,12 @@
+<h2><%= @result['title'].upcase%></h2>
+
+<div id="poster">
+	<img src="<%= @result['poster']%>" alt="Movie poster"></a>
+</div>
+<div id="info">
+	  	<%  @result.each do |key, value| %>
+
+			<div class="listing"> <%= key.capitalize + ' === ' + value %> </div>
+
+		<% end %>  
+</div>

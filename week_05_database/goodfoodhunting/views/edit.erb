@@ -1,8 +1,9 @@
 <h2>Edit Dish</h2>
 
 <form action="/dishes/<%= @dish['id'] %>" method="post">
+	<input type="hidden" name="_method" value="put">
 	<label for="">Name</label>
-	<input type="text" name="name" value="<%= @dish['name'] %>">
+	<input type="text" name="name" value="<%= @dish.name %>">  <!-- Active record allows dot notation and square bracket notation -->
 
 	<label for="">Image URL</label>
 	<input type="text" name="image_url" value="<%= @dish['image_url'] %>">
