@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fumblr</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <script src="/javascripts/jquery.js"></script>
+</head>
+<body>
+
+	<ul>
+		 <% @categories.each do |category| %>
+			 <li><%= category.name %></li> <!-- has to change to category.name because we're using multiple table method -->
+		  <% end %>  
+	</ul>
+
+  <%= yield %>
+
+</body>

@@ -26,7 +26,7 @@ get '/dishes' do
 	erb :index
 end 
 
-#show new form
+#show new form to get information
 get '/dishes/new' do 
 	erb :new
 end

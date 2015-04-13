@@ -1,0 +1,40 @@
+require 'sinatra'
+require 'sinatra/reloader'
+require 'json'
+require 'httparty'
+require 'pry'
+
+get '/' do
+	
+	erb :index
+end
+
+get '/lotto' do 
+	Random.rand(1..40).to_s
+end
+
+get '/slow' do 
+	sleep 5
+	"<em>haha</em>" * Random.rand(1..5)
+end
+
+get '/students' do
+	"dom jc beta"
+end
+
+get '/api/students' do 
+	content_type :json
+	
+	content = {
+		name: 'dom',
+		luckyNumber: 6,
+		currentTime: Time.now
+	}
+
+	content.to_json ##object to json notation
+end
+
+get '/hi_dom' do 
+	result = HTTParty.get('http://localhost:4567/slow')
+	result.to_s
+end
