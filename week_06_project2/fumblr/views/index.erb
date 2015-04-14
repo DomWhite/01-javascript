@@ -13,7 +13,8 @@
   <% end %> 
 
   <script>
-
+//This is the same as using the .each do above but is useful for online API's
+// and changing without having to reload
  	var createPost = function(event) {
  		event.preventDefault(); //prevent submit from happening
  		console.log("creating post....");
@@ -33,7 +34,7 @@
 
 //event request
   	$('#new-post-form').on('submit', createPost); //find new-post-form and on 'submit' run createPost
-
+  doSomething();
   </script>
 
 

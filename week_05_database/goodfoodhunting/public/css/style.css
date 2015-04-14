@@ -45,3 +45,8 @@ img {
 a:visited {
     color: white;
 }
+
+.hidden {
+	background-color: red;
+	display: none;
+}

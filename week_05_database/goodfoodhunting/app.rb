@@ -31,6 +31,15 @@ get '/dishes/new' do
 	erb :new
 end
 
+#create new dish
+post '/dishes' do
+	# sql = "INSERT INTO dishes (name, image_url) VALUES ('#{params['name']}', '#{params['image_url']}')"
+
+	# run_sql(sql)
+	Dish.create name: "#{params['name']}", image_url: "#{params['image_url']}"
+	redirect to ('/')
+end
+
 #show edit form
 get '/dishes/:id/edit' do  #having :id here makes a dynamic link(from what was clicked) 
 							#It is a place holder for below
@@ -42,14 +51,6 @@ get '/dishes/:id/edit' do  #having :id here makes a dynamic link(from what was c
 end
 
 
-#create new dish
-post '/dishes' do
-	# sql = "INSERT INTO dishes (name, image_url) VALUES ('#{params['name']}', '#{params['image_url']}')"
-
-	# run_sql(sql)
-	Dish.create name: "#{params['name']}", image_url: "#{params['image_url']}"
-	redirect to ('/')
-end
 
 #update existing dish
 put '/dishes/:id' do  

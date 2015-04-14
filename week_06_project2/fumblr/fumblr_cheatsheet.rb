@@ -200,3 +200,44 @@ from /Users/dominicwhite/.rvm/gems/ruby-2.2.1/gems/activerecord-4.2.0/lib/active
 => 2
 [22] pry(main)> p.save
 => true
+
+
+
+
+[1] pry(main)> User.count
+=> 0
+[2] pry(main)> User.all
+=> []
+[3] pry(main)> User.create email: 
+[3] pry(main)* 'dom@bigpony.com', password: 'bigpony'
+=> #<User:0x007fdad2f6c8e0
+ id: 1,
+ email: "dom@bigpony.com",
+ password_digest: "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa">
+[4] pry(main)> User.first.password_digest
+=> "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa"
+[5] pry(main)> User.where(email: 'dom@bigpony.com')
+=> [#<User:0x007fdad2c144e0
+  id: 1,
+  email: "dom@bigpony.com",
+  password_digest: "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa">]
+[6] pry(main)> User.where(email: 'dom@bigpony.com').first
+=> #<User:0x007fdad3a7efa8
+ id: 1,
+ email: "dom@bigpony.com",
+ password_digest: "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa">
+[7] pry(main)> pass = 'littlepony'
+=> "littlepony"
+[8] pry(main)> u1 = User.where(email: 'dom@bigpony.com').first
+=> #<User:0x007fdad2b94ad8
+ id: 1,
+ email: "dom@bigpony.com",
+ password_digest: "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa">
+[9] pry(main)> u1.authenticate(pass)
+=> false
+[10] pry(main)> u1.authenticate('bigpony')
+=> #<User:0x007fdad2b94ad8
+ id: 1,
+ email: "dom@bigpony.com",
+ password_digest: "$2a$10$KzV2KsyjKiLFi4x1kPU9hOFX1ibvlxF3z7M6swRNmP.ieooLqYsRa">
+[11] pry(main)> 
