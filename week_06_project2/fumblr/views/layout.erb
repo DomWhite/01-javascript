@@ -1,32 +1,40 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Fumblr</title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
-  <script src="/javascripts/jquery.js"></script>
-  <script src="/javascripts/application.js"></script>
-</head>
-<body>
-	<% if logged_in? %>
-	<p>
-		<form action="/session" method ="post" >
-			<input type="hidden" name="_method" value="delete">
-		<button>Log Out</button>
-		</form>
-	</p>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fumblr</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/stylesheets/main.css'>
+		<script src="/javascripts/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="/javascripts/application.js"></script>
+	</head>
+	<body>
+		<% if logged_in? %>
+		<p>
+			<form action="/session" method ="post" >
+				<input type="hidden" name="_method" value="delete">
+				<button>Log Out</button>
+			</form>
+		</p>
 		<p> Logged in as <%=current_user.email %> </p>
-
-	 <% else %>
+		<% else %>
 		<a href="/session/new">Login</a>
-	 <% end %>
+		<% end %>
 
-	<ul>
-	 	<% @categories.each do |category| %>
-		 	<li><%= category.name %></li> <!-- has to change to category.name because we're using multiple table method -->
-	  	<% end %>  
-	</ul>
-
-  <%= yield %>
-
-</body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3 hidden-xs">
+					<ul>
+						<% @categories.each do |category| %>
+						<li><%= category.name %></li> <!-- has to change to category.name because we're using multiple table method -->
+						<% end %>
+					</ul>
+					
+				</div>
+				<div class="col-md-9">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</body>

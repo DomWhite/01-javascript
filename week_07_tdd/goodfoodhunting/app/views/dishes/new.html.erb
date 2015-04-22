@@ -1,0 +1,14 @@
+<h2>New Dish</h2>
+
+
+<form action="/dishes" method="post">
+ <input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+	<label for="">Name</label>
+	<input type="text" name="title">
+<!-- name= is where params gets its data from -->
+	<label for="">Image URL</label>
+	<input type="text" name="image_url">
+	<br>
+	<button>Create</button>
+
+</form>

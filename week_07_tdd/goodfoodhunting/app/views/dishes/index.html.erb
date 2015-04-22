@@ -1,0 +1,67 @@
+<div class="grid">
+
+	<h1>Good Food Hunting</h1>
+	<a href="/dishes/new" class="new_dish">New Dish</a>
+
+
+	<ul>
+		<% @dishes.each do |dish| %>
+		<li> <%= dish.title  %>
+			  <img src="<%= dish.image_url %>"> 
+			<a href="/dishes/<%= dish.id %>/edit">Edit</a>
+
+			<form action="/dishes/<%= dish.id %>/delete" method ="post">
+	  			<input type="hidden" name="_method" value="delete">
+	  			<input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+	  			<button>Delete</button>
+	  		</form>
+	  		
+	  </li>
+		<% end %>
+	</ul>
+
+	
+</div>
+
+
+
+
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: tomato;*/
+	background: linear-gradient(plum, tomato);
+	
+}
+
+a {
+	color: white;
+	font-family: "Lucida Console";
+}
+
+h1 {
+	font-family: "Lucida Console";
+	text-align: center;
+	/*color: tomato;*/
+	font-size: 100px;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+	font-family: "Lucida Console";
+}
+
+img {
+	height: 100px;
+	width: 100px;
+}
+
+.grid {
+	/*background-color: black;*/
+	/*color: tomato;*/
+	padding: 20px;
+}
+</style>

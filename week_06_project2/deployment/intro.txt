@@ -1,0 +1,24 @@
+App directories must be a separate repository.
+
+git init
+git add -A
+git commit -m "initial commit"
+
+In the directory:
+
+~$ bundle 		to create gemfile.lock
+
+~$ heroku create domain_name
+
+
+add heroku database:
+
+~$ heroku addons:add heroku-postgresql
+
+~$ git push heroku master --this can be used to push changes too
+
+~$ heroku pg:info for info
+
+See Shamblr main.rb for details on how to connect to both heroku and local
+
+~$ heroku pg:psql to connect to database on heroku

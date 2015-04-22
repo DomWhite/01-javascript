@@ -63,7 +63,7 @@ put '/dishes/:id' do
 	dish.image_url = params[:image_url]
 	dish.save
 
-	#dish.update name: params[:name], image_url: params[image_url] -- no .save is necessary for update
+	#dish.update name: params[:name], image_url: params[:image_url] -- no .save is necessary for update
 
 	redirect to '/'
 end
