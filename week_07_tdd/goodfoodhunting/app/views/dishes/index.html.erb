@@ -2,20 +2,28 @@
 
 	<h1>Good Food Hunting</h1>
 	<a href="/dishes/new" class="new_dish">New Dish</a>
+	<a href="/tags">Tags</a>
+	<a href="/users">Users</a>
 
 
 	<ul>
 		<% @dishes.each do |dish| %>
-		<li> <%= dish.title  %>
+		<li> <%= link_to dish.title, dish %>
 			  <img src="<%= dish.image_url %>"> 
-			<a href="/dishes/<%= dish.id %>/edit">Edit</a>
 
-			<form action="/dishes/<%= dish.id %>/delete" method ="post">
+			 <%= link_to 'Edit', edit_dish_path(dish) %> 
+
+<!-- 			<form action="/dishes/<#%= dish.id %>" method ="post">
 	  			<input type="hidden" name="_method" value="delete">
-	  			<input type= "hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+	  			<input type= "hidden" name="authenticity_token" value="<#%= form_authenticity_token %>">
 	  			<button>Delete</button>
-	  		</form>
-	  		
+	  	</form> -->
+
+			<!-- refactored version -->
+		<%= form_for dish, :method => :delete do |f| %>
+			<%= f.submit 'delete' %> <!-- or <button>Delete</button>-->
+		<% end %> 
+
 	  </li>
 		<% end %>
 	</ul>
@@ -32,7 +40,7 @@ body {
 	margin: 0;
 	padding: 0;
 	/*background-color: tomato;*/
-	background: linear-gradient(plum, tomato);
+	background: -webkit-linear-gradient(plum, black, tomato);
 	
 }
 
@@ -56,7 +64,7 @@ ul {
 
 img {
 	height: 100px;
-	width: 100px;
+	width: 150px;
 }
 
 .grid {

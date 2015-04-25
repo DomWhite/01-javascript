@@ -1,0 +1,16 @@
+<h1>Tags</h1>
+
+<a href="/tags/new" class="new_tag">New Tag</a>
+
+<ul>
+	<% @tags.each do |tag| %>
+		<li> 
+			<%=  tag.name %>
+			<%= link_to 'Edit', edit_tag_path(tag) %>
+			<%= form_for tag, :method => :delete do |f| %>
+			<%= f.submit 'delete' %> <!-- or <button>Delete</button>-->
+		<% end %> 
+		</li>
+	 <% end %> 
+
+</ul>

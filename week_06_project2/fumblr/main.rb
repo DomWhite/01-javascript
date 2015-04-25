@@ -30,7 +30,7 @@ helpers do #helper method
 	def logged_in? # trick to convert object to boolean (uses double negative)
 		!!current_user
 	end
-end
+
 
 # binding.pry
 	def current_user
@@ -39,6 +39,7 @@ end
 		#find will break if record not found
 		User.find_by(id: session[:user_id])
 	end
+end
 
 get '/session/new' do
 

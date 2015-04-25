@@ -1,0 +1,27 @@
+<h1><%= @dish.title %></h1>
+<img src="<%= @dish.image_url %>" alt="">
+
+<%# @dish.tags.each do |tag| %>
+	<p><%#= tag.name %></p>
+<%# end %>
+
+
+
+<%= @dish.tags.pluck(:name).join(', ') %>
+
+<img src="<%= @dish.photo_url %>" alt="">
+
+<!-- .pluck is used for generating the sql to "pluck" name from @dish.tag -->
+
+
+<style>
+	body {
+		background-color: tomato;
+	}
+
+	img {
+		width: 400px;
+		height: 300px;
+	}
+
+</style>

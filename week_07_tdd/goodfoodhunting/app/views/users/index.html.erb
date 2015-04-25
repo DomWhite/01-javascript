@@ -1,0 +1,53 @@
+<h1>Users</h1>
+
+<a href="/users/new" class="new_user">New User</a>
+
+<ul>
+	 <% @users.each do |user| %> 
+	<li>
+		<%= user.email %>
+		<%= user.password_digest %>
+
+		<%= link_to 'Edit', edit_user_path(user) %> 
+
+		<%= form_for user, :method => :delete do |f| %>
+			<%= f.submit 'delete' %>
+		<% end %> 
+
+	</li>
+	 <% end %> 
+</ul>
+
+
+
+
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	/*background-color: tomato;*/
+	background: -webkit-linear-gradient(plum, black, tomato);
+	
+}
+
+a {
+	color: white;
+	font-family: "Lucida Console";
+}
+
+h1 {
+	font-family: "Lucida Console";
+	text-align: center;
+	/*color: tomato;*/
+	font-size: 100px;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+	font-family: "Lucida Console";
+}
+
+
+</style>
