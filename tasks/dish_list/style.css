@@ -1,0 +1,75 @@
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+body {
+	background-color: tomato;
+}
+
+#container {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.dish-element {
+	display: inline-block;
+	width: 300px;
+	margin: 0px 10px;
+}
+
+.dish-item {
+	width: 300px;
+	background-color: grey;
+	margin-bottom: 1em;
+	height: 400px;
+}
+
+
+
+.content {
+	position: relative;
+}
+/* the greater than here denotes img within first level only */
+.content > img {
+	width: 300px;
+	height: 300px;
+	display: block;
+}
+
+
+.title {
+	margin-left: 5px;
+	font-family: sans-serif;
+	color: rgb(147, 183, 95);
+}
+
+.blurb {
+	margin-left: 5px;
+	color: white;
+	font-family: sans-serif;
+}
+
+.stars-count {
+	margin-left: 5px;
+	margin-top: 38px;
+	color: darkgrey;
+	font-family: sans-serif;
+
+}
+
+#btnClickMe {
+	vertical-align: top;
+	margin-top: 30px;
+	padding: 5px;
+}
+
+.btnStar {
+	font-size: 2em;
+	color: darkgrey;
+	position: absolute;
+	top: 0;
+	right: 2px;
+}
+
+.btnStar:hover {
+	color: yellow;
+}
+

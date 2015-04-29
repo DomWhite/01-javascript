@@ -1,0 +1,25 @@
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+body {
+	background-color: tomato;
+}
+
+#container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.profile-item {
+	background-color: linen;
+	margin-bottom: 1em;
+	height: 282px;
+}
+
+.content {
+	padding-left: 300px;
+}
+/* the greater than here denotes img within first level only */
+.content > img {
+	position: absolute;
+	margin-left: -300px;
+}

@@ -1,4 +1,11 @@
 <h1><%= @dish.title %></h1>
+<!-- Above as HAML  -->
+%h1= @dish.title
+
+%div
+	%p ssddf
+
+
 <img src="<%= @dish.image_url %>" alt="">
 
 <%# @dish.tags.each do |tag| %>

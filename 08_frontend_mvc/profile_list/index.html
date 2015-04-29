@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile List</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+
+
+</div>
+
+
+<script id= "profile-item-template" type="text/x-underscore-template">
+	<div class="profile-item">
+		<div class="content">
+			<img src="<%= image_url %>" alt="">
+			<h2> <%= username %> </h2>
+			<p> <%= blurb %> </p>
+		</div>
+	</div>
+</script>
+
+
+	<script src= "underscore.js"></script>
+	<script src= "jquery.js"></script>
+	<script src= "app.js"></script>
+</body>
+</html>
