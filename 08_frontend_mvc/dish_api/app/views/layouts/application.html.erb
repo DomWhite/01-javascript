@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Dish List</title>
-	<link rel="stylesheet" href="style.css">
+  <title>DishApi</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
-
 
 	<div id="container">
 
 	</div>
 
 	<button id="magic-btn">Add Dish</button>
-
-
-
-
-
-
 
 	<script id= "dish-item-template" type="text/x-underscore-template">
 		<div class="dish-item">
@@ -32,13 +26,5 @@
 		</div>
 	</script>
 
-
-	<script src= "underscore.js"></script>
-	<script src= "jquery.js"></script>
-	<script src= "backbone.js"></script>
-	<script src= "dish.js"></script>
-	<script src= "dishes.js"></script>
-	<script src= "dish_view.js"></script>
-	<script src= "app2.js"></script>
 </body>
 </html>

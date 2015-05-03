@@ -1,0 +1,43 @@
+$primary-color: #6cc0e5;
+
+@mixin color-align($color, $align) {
+	color: $color;
+	text-align: $align;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body {
+	background-color: $primary-color;
+}
+
+.todo-item {
+
+	h2 {
+		background-color: darken(#fb4f4f, 20%);
+		@include border-radius(10px);
+/*		color: white;
+		text-align: center;*/
+		@include color-align(white, center);
+		height: 5em;
+		line-height: 5em;
+
+	}
+
+	p {
+		background-color:lighten(#fbc93d, 5%);
+		@include border-radius(5px);
+/*		color: white;
+		text-align: center;*/
+		@include color-align(white, center);
+		height: 4em;
+		line-height: 4em;
+	}
+}
+
+
