@@ -13,7 +13,7 @@ class SessionController < ApplicationController
 
 #check if we have @user 
 		if @user && @user.authenticate(params[:password])
-			#session[] is part of rails like params(it is a global variable)
+			#session[] is part of rails like params(it is a global variable(a hash))
 			session[:user_id] = @user.id
 			# correct password
 			redirect_to '/' # or root_path

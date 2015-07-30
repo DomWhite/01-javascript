@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "name": "cody", "github_url": "blah" },
+    { "name": "perry", "github_url": "blah" },
+    { "name": "dt", "github_url": "blah" }
+  ]
+}

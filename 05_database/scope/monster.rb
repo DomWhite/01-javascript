@@ -35,4 +35,4 @@ end
 #instances of monster
 m1 = Monster.new('bob')
 
-m2 = Monster.('bebob')
+m2 = Monster.new('bebob')

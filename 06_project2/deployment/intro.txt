@@ -15,10 +15,24 @@ add heroku database:
 
 ~$ heroku addons:add heroku-postgresql
 
+this may be returned
+```
+WARNING: `heroku addons:add` has been deprecated. Please use `heroku addons:create` instead.
+^[[ACreating advising-ably-7629... done
+Adding advising-ably-7629 to truetrac... done
+Setting DATABASE_URL and restarting truetrac... done, v3
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pgbackups:restore
+Use `heroku addons:docs heroku-postgresql` to view documentation.
+```
+
 ~$ git push heroku master --this can be used to push changes too
 
 ~$ heroku pg:info for info
 
 See Shamblr main.rb for details on how to connect to both heroku and local
 
-~$ heroku pg:psql to connect to database on heroku
+~$ heroku run rake db:schema:load --to migrate tables from local directory
+
+~$ heroku pg:psql to connect --to database on heroku
